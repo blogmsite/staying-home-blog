@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="Cost-first, state-aware aging-in-place guides for adult children and homeowners 65+: walk-in tub and shower costs, Medicare and VA HISA coverage, stair lifts, ramps, grab bars, and a room-by-room safety checklist. All costs are estimates and ranges, not quotes." />
+<link rel="icon" href="data:," />
+<title>Staying Home — Aging-in-Place Costs, Funding &amp; Safety Guides</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    color-scheme: light dark;
+    --bg:#f7f5f0; --surface:#ffffff; --surface2:#efece4; --ink:#1c2420; --muted:#55615a;
+    --line:#ddd8cb; --brand:#1e5a46; --brand-ink:#ffffff; --accent:#b4551f; --accent-soft:#fbeadd;
+    --good:#1e5a46; --warn-bg:#fdf3e3; --warn-line:#e3c893; --warn-ink:#6b4d12;
+    --chip:#e9e5d9; --shadow:0 10px 30px rgba(28,36,32,.08);
+    --radius:14px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#121613; --surface:#1a201c; --surface2:#222a25; --ink:#eceee9; --muted:#a9b3ab;
+      --line:#333d36; --brand:#7fc7a8; --brand-ink:#0e1a14; --accent:#eda26b; --accent-soft:#3a2a1c;
+      --warn-bg:#2c2415; --warn-line:#6b5626; --warn-ink:#ecd9a8;
+      --chip:#262e29; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{animation:none!important;transition:none!important} }
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Public Sans",system-ui,sans-serif;font-size:16.5px;line-height:1.65}
+  h1,h2,h3{font-family:"Newsreader",Georgia,serif;line-height:1.15;margin:0}
+  a{color:var(--brand)}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  /* header */
+  header.site{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
+  .site-in{display:flex;align-items:center;gap:18px;padding:12px 0;flex-wrap:wrap}
+  .wordmark{font-family:"Newsreader",serif;font-weight:700;font-size:1.35rem;color:var(--ink);text-decoration:none}
+  .wordmark span{color:var(--brand)}
+  nav.main{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+  nav.main a{color:var(--ink);text-decoration:none;font-size:.92rem;font-weight:600;padding:7px 11px;border-radius:8px}
+  nav.main a:hover{background:var(--surface2)}
+  /* hero */
+  .hero{padding:44px 0 10px}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
+  .hero h1{font-size:clamp(2.1rem,4.6vw,3.3rem);font-weight:700;letter-spacing:-.01em}
+  .hero h1 em{font-style:italic;color:var(--brand)}
+  .hero p.lede{font-size:1.13rem;color:var(--muted);margin:18px 0 0;max-width:34em}
+  .hero-img{border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+  .hero-img img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+  .hero-img figcaption{font-size:.8rem;color:var(--muted);padding:8px 4px 0;background:var(--bg)}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0 6px}
+  .stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+  .stat b{font-family:"Newsreader",serif;font-size:1.7rem;display:block;color:var(--brand)}
+  .stat span{font-size:.88rem;color:var(--muted)}
+  /* notice */
+  .notice{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn-ink);border-radius:var(--radius);padding:14px 18px;font-size:.93rem;margin:22px 0}
+  .notice strong{color:inherit}
+  /* sections */
+  section.block{padding:38px 0 6px}
+  .sec-head{max-width:46em}
+  .sec-head h2{font-size:clamp(1.6rem,3vw,2.15rem);font-weight:700}
+  .sec-head p{color:var(--muted);margin:10px 0 0}
+  /* chart */
+  .chart-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);margin-top:20px}
+  .chart-card h3{font-size:1.15rem;margin-bottom:4px}
+  .chart-note{font-size:.85rem;color:var(--muted)}
+  /* filters + cards */
+  .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:22px 0 6px}
+  .chipbtn{border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:999px;padding:8px 15px;font:inherit;font-size:.9rem;font-weight:600;cursor:pointer}
+  .chipbtn[aria-pressed="true"]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+  .searchbox{flex:1 1 220px}
+  .searchbox input{width:100%;padding:10px 14px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:.95rem}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:16px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:var(--ink);transition:transform .15s ease, box-shadow .15s ease}
+  .card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .card img{height:150px;width:100%;object-fit:cover}
+  .card .pad{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .tag{align-self:flex-start;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--accent-soft);color:var(--accent);padding:3px 9px;border-radius:999px}
+  .card h3{font-size:1.18rem;font-weight:600}
+  .card p{margin:0;font-size:.92rem;color:var(--muted);flex:1}
+  .card .costline{font-weight:700;color:var(--brand);font-size:.95rem}
+  .card .go{font-size:.9rem;font-weight:700}
+  .hidden-card{display:none!important}
+  .noresults{display:none;padding:26px;text-align:center;color:var(--muted)}
+  /* articles */
+  article.guide{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:30px 32px;margin:26px 0;scroll-margin-top:84px}
+  article.guide .kicker{font-size:.75rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+  article.guide h2{font-size:clamp(1.5rem,2.8vw,2rem);margin:8px 0 6px}
+  article.guide .sub{color:var(--muted);margin:0 0 16px;max-width:44em}
+  article.guide h3{font-size:1.22rem;margin:24px 0 8px}
+  article.guide p{max-width:46em}
+  article.guide ul{max-width:44em;padding-left:1.25em}
+  article.guide li{margin:5px 0}
+  .guide-img{border-radius:12px;overflow:hidden;margin:6px 0 18px}
+  .guide-img img{width:100%;max-height:340px;object-fit:cover}
+  .guide-img figcaption{font-size:.8rem;color:var(--muted);padding-top:6px}
+  .answer{background:var(--surface2);border-radius:12px;padding:16px 20px;margin:16px 0;max-width:46em}
+  .answer b{color:var(--brand)}
+  table.cost{border-collapse:collapse;width:100%;max-width:46em;margin:12px 0;font-size:.95rem}
+  table.cost caption{text-align:left;font-weight:700;font-family:"Newsreader",serif;font-size:1.05rem;padding-bottom:8px}
+  table.cost th,table.cost td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+  table.cost th{font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+  table.cost td.num{font-weight:700;white-space:nowrap}
+  .disclaimer{border:1px solid var(--warn-line);background:var(--warn-bg);color:var(--warn-ink);border-radius:10px;padding:12px 16px;font-size:.88rem;margin:18px 0 4px;max-width:46em}
+  .srcs{font-size:.85rem;color:var(--muted);margin-top:14px;max-width:46em}
+  .srcs a{color:var(--muted);text-decoration:underline}
+  /* state picker */
+  .statepick{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:14px 0}
+  .statepick select{padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-weight:600}
+  .state-out{background:var(--surface2);border-radius:12px;padding:16px 20px;max-width:46em}
+  .state-out .big{font-family:"Newsreader",serif;font-size:1.5rem;color:var(--brand);font-weight:700}
+  /* checklist */
+  .check-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+  .check-col{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px}
+  .check-col h3{font-size:1.15rem;margin-bottom:10px}
+  ul.tick{list-style:none;padding:0;margin:0}
+  ul.tick li{padding:8px 0 8px 30px;position:relative;border-bottom:1px dashed var(--line);font-size:.95rem}
+  ul.tick li:last-child{border-bottom:none}
+  ul.tick li::before{content:"";position:absolute;left:2px;top:12px;width:15px;height:15px;border:2px solid var(--brand);border-radius:4px}
+  ul.tick .c{font-weight:700;color:var(--accent);white-space:nowrap}
+  .btn{display:inline-block;background:var(--brand);color:var(--brand-ink);border:none;border-radius:10px;padding:11px 20px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none}
+  .btn.secondary{background:var(--surface);color:var(--brand);border:1px solid var(--brand)}
+  .btnrow{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+  .copied{font-size:.9rem;color:var(--brand);font-weight:700;align-self:center}
+  /* sources + footer */
+  .sources-list{columns:2;column-gap:34px;font-size:.93rem}
+  .sources-list li{margin:8px 0;break-inside:avoid}
+  footer{border-top:1px solid var(--line);margin-top:48px;padding:30px 0 44px;color:var(--muted);font-size:.9rem}
+  footer .cols{display:grid;grid-template-columns:1.2fr 1fr;gap:26px}
+  footer h3{color:var(--ink);font-size:1.05rem;margin-bottom:8px}
+  footer ul{list-style:none;padding:0;margin:0}
+  footer li{margin:5px 0}
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr}
+    .cards{grid-template-columns:1fr 1fr}
+    .check-grid{grid-template-columns:1fr}
+    .sources-list{columns:1}
+    footer .cols{grid-template-columns:1fr}
+    article.guide{padding:24px 20px}
+  }
+  @media (max-width:560px){
+    .cards{grid-template-columns:1fr}
+    .stats{grid-template-columns:1fr}
+    table.cost td.num{white-space:normal}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap site-in">
+    <a class="wordmark" href="#top">Staying<span>Home</span></a>
+    <nav class="main" aria-label="Main">
+      <a href="#guides">All 12 guides</a>
+      <a href="#costs">Cost snapshot</a>
+      <a href="#medicare">Medicare &amp; VA</a>
+      <a href="#checklist">Safety checklist</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <h1>The real cost of <em>staying home</em> safely — by project, and who actually pays.</h1>
+        <p class="lede">Written for adult children deciding for a parent, and for homeowners 65+ planning ahead. Every guide here leads with the price range, separates what Medicare, Medicare Advantage, Medicaid waivers and VA grants usually do and don't cover, and ends with the questions to ask before you sign anything.</p>
+        <div class="btnrow">
+          <a class="btn" href="#guides">Browse the 12 guides</a>
+          <a class="btn secondary" href="#checklist">Start with the safety checklist</a>
+        </div>
+      </div>
+      <figure class="hero-img" style="margin:0">
+        <img src="assets/hero-bath.jpg" alt="Accessible bathroom remodelled for aging in place, with a walk-in shower, bench and modern fixtures" />
+        <figcaption>An aging-ready bathroom: step-free shower entry, seating, and room to move. Photo via Cleary Company project gallery.</figcaption>
+      </figure>
+    </div>
+
+    <div class="stats" role="list">
+      <div class="stat" role="listitem"><b>80–90%</b><span>of US adults 65+ say they want to age in place (AARP, via Household Guardians summary)</span></div>
+      <div class="stat" role="listitem"><b>~28%</b><span>of US homes are considered “aging-ready” (Harvard JCHS / NAHB figures, same summary)</span></div>
+      <div class="stat" role="listitem"><b>$701–$8,041</b><span>typical range for a wheelchair-accessible remodel, average $4,378 — Angi, 2026, based on 403 projects. Estimate, not a quote.</span></div>
+    </div>
+
+    <div class="notice" role="note">
+      <strong>How to read the prices on this site:</strong> every dollar figure is an <strong>estimate or range, never a quote</strong>. Prices move with your state, city, permits, plumbing and the contractor you hire. This site is general information only — <strong>not medical or legal advice</strong>. Confirm coverage with your own health plan and costs with a licensed local contractor before you commit.
+    </div>
+  </div>
+
+  <!-- COST SNAPSHOT -->
+  <section class="block wrap" id="costs">
+    <div class="sec-head">
+      <h2>Cost snapshot: the four anchor projects</h2>
+      <p>These are the published ranges the guides below build on — Angi's 2026 accessibility cost data (403 projects). Use them to sanity-check any quote you receive: a number far outside the range deserves a second and third bid.</p>
+    </div>
+    <div class="chart-card">
+      <h3>Installed cost ranges (estimates, USD)</h3>
+      <p class="chart-note">Bars show the low–high range reported by Angi (2026). The accessible-remodel bar shows the “most homeowners” range; its average is $4,378.</p>
+      <svg viewBox="0 0 720 218" width="100%" role="img" aria-label="Bar chart of installed cost ranges: grab bars 100 to 500 dollars each; stair lift 1,500 to 5,000 dollars; walk-in tub 1,100 to 17,000 dollars; wheelchair-accessible remodel 701 to 8,041 dollars for most homeowners." style="margin-top:14px">
+        <!-- scale: $18,000 -> x from 190 to 700 (510px) -->
+        <g font-family="Public Sans, sans-serif" font-size="12.5">
+          <text x="0" y="26" fill="var(--ink)" font-weight="600">Grab bars (each)</text>
+          <rect x="190" y="12" width="3" height="18" fill="var(--brand)"/>
+          <rect x="190" y="12" width="14" height="18" rx="3" fill="var(--brand)" opacity="0.85"/>
+          <text x="212" y="26" fill="var(--muted)">$100 – $500</text>
+
+          <text x="0" y="76" fill="var(--ink)" font-weight="600">Stair lift</text>
+          <rect x="232" y="62" width="100" height="18" rx="3" fill="var(--brand)" opacity="0.85"/>
+          <text x="340" y="76" fill="var(--muted)">$1,500 – $5,000</text>
+
+          <text x="0" y="126" fill="var(--ink)" font-weight="600">Walk-in tub</text>
+          <rect x="221" y="112" width="479" height="18" rx="3" fill="var(--accent)" opacity="0.9"/>
+          <text x="221" y="106" fill="var(--muted)">$1,100</text>
+          <text x="610" y="106" fill="var(--muted)">– $17,000</text>
+
+          <text x="0" y="176" fill="var(--ink)" font-weight="600">Accessible remodel</text>
+          <rect x="210" y="162" width="218" height="18" rx="3" fill="var(--brand)" opacity="0.85"/>
+          <text x="436" y="176" fill="var(--muted)">$701 – $8,041 (avg $4,378)</text>
+
+          <line x1="190" y1="196" x2="700" y2="196" stroke="var(--line)"/>
+          <text x="190" y="212" fill="var(--muted)">$0</text>
+          <text x="445" y="212" fill="var(--muted)">$9,000</text>
+          <text x="655" y="212" fill="var(--muted)">$18,000</text>
+        </g>
+      </svg>
+      <p class="chart-note">Source: Angi, “How much does it cost to make my home handicap accessible?” (2026). Ranges are national estimates — your state and city will move you within, and sometimes outside, them. Not quotes.</p>
+    </div>
+  </section>
+
+  <!-- GUIDE INDEX -->
+  <section class="block wrap" id="guides">
+    <div class="sec-head">
+      <h2>The 12 guides</h2>
+      <p>Filter by the decision you're facing, or search. Each guide is complete on this page — cost table first, then the detail, then sources and the fine print.</p>
+    </div>
+    <div class="toolbar" role="group" aria-label="Filter guides">
+      <button class="chipbtn" data-filter="all" aria-pressed="true">All 12</button>
+      <button class="chipbtn" data-filter="bathroom" aria-pressed="false">Bathroom</button>
+      <button class="chipbtn" data-filter="mobility" aria-pressed="false">Mobility &amp; entry</button>
+      <button class="chipbtn" data-filter="funding" aria-pressed="false">Who pays</button>
+      <button class="chipbtn" data-filter="planning" aria-pressed="false">Planning &amp; safety</button>
+      <span class="searchbox"><input type="search" id="guideSearch" placeholder="Search guides — try “Medicare”, “ramp”, “Florida”…" aria-label="Search guides" /></span>
+    </div>
+    <div class="cards" id="cardGrid">
+      <a class="card" data-cat="bathroom" data-text="walk-in tub cost installed florida texas california state price" href="#g1">
+        <img src="assets/walkin-tub.jpg" alt="Walk-in tub with a low entry door and built-in seat in a home bathroom" />
+        <div class="pad"><span class="tag">Bathroom · Cost</span><h3>How much does a walk-in tub cost, installed — by state?</h3><p>Why the same tub is quoted at $4,000 in one state and $17,000 in another, and the five line items that move the price.</p><span class="costline">Estimate: $1,100 – $17,000 installed</span><span class="go">Read the guide →</span></div>
+      </a>
+      <a class="card" data-cat="bathroom" data-text="walk-in tub vs walk-in shower pros cons cost seniors compare" href="#g2">
+        <img src="assets/shower.jpg" alt="Walk-in shower with low entry, bench seating and hand-held shower head" />
+        <div class="pad"><span class="tag">Bathroom · Compare</span><h3>Walk-in tub vs. walk-in shower: an honest comparison</h3><p>Fill-and-drain waiting, hot-water use, resale, and who should not buy a tub — from a site that sells neither.</p><span class="costline">Tub $1,100–$17,000 · Shower: see guide</span><span class="go">Read the guide →</span></div>
+      </a>
+      <a class="card" data-cat="funding" data-text="does medicare pay walk-in tub grab bars stair lift coverage advantage medicaid" href="#g3">
+        <img src="assets/grabbars.jpg" alt="Bathroom fitted with grab bars beside the tub and toilet for safer transfers" />
+        <div class="pad"><span class="tag">Who pays</span><h3>Does Medicare pay for a walk-in tub, grab bars, or a stair lift?</h3><p>The short answer is usually no — with three exceptions worth checking before you pay out of pocket.</p><span class="costline">Original Medicare: usually $0 for these items</span><span class="go">Read the guide →</span></div>
+      </a>
+      <a class="card" data-cat="funding" data-text="va hisa grant home modifications veteran apply sah sha" href="#g4">
+        <img src="assets/home-senior.jpg" alt="Older homeowner living independently in her own home" />
+        <div class="pad"><span class="tag">Who pays · Veterans</span><h3>VA HISA grants for home modifications: how to apply</h3><p>Step-by-step eligibility, what HISA covers, how it differs from SAH/SHA grants, and what your contractor's quote must show.</p><span class="costline">Grant help for eligible veterans — amounts vary</span><span class="go">Read the guide →</span></div>
+      </a>
+      <a class="card" data-cat="bathroom" data-text="convert tub to walk-in shower conversion cost curbless breakdown" href="#g5">
+        <img src="assets/shower.jpg" alt="Curbless walk-in shower created by converting a bathtub alcove" />
+        <div class="pad"><span class="tag">Bathroom · Cost</span><h3>Tub-to-walk-in-shower conversion: full cost breakdown</h3><p>Demolition, waterproofing, curbless vs. low-curb, tile vs. panels — where the money actually goes.</p><span class="costline">Estimate: inside the $701–$8,041 remodel range, often above it</span><span class="go">Read the guide →</span></div>
+      </a>
+      <a class="card" data-cat="bathroom" data-text="grab bars placement height ada shower toilet studs suction" href="#g6">
+        <img src="assets/grabbars.jpg" alt="Grab bars mounted at the shower entry and beside the toilet" />
+        <div class="pad"><span class="tag">Bathroom · How-to</span><h3>Grab bars: where to place them, at what height</h3><p>Placement by shower type, why anchoring matters more than the bar, and why suction-cup bars are not grab bars.</p><span class="costline">Estimate: $100 – $500 per bar, installed</span><span class="go">Read the guide →</span></div>
+      </a>
+      <a class="card" data-cat="mobility" data-text="stair lift cost straight vs curved stairs rental used measurements" href="#g7">
+        <img src="assets/hero-bath.jpg" alt="Home stairway and landing where a stair lift would be fitted" />
+        <div class="pad"><span class="tag">Mobility · Cost</span><h3>Stair lift cost: straight vs. curved, new vs. rental</h3><p>Why a curve can multiply the price, when renting beats buying, and the measurements to take before anyone quotes you.</p><span class="costline">Estimate: $1,500 – $5,000 (straight, typical range)</span><span class="go">Read the guide →</span></div>
+      </a>
+      <a class="card" data-cat="mobility" data-text="wheelchair ramp cost wood aluminum modular slope permit hoa" href="#g8">
+        <img src="assets/ramp.jpg" alt="Modular aluminium wheelchair ramp installed at a home entrance" />
+        <div class="pad"><span class="tag">Mobility · Cost</span><h3>Wheelchair ramp cost: wood vs. aluminium vs. modular</h3><p>The slope maths that decides ramp length — and therefore price — plus permit and HOA rules people learn too late.</p><span class="costline">Estimate: scales with rise — see the maths inside</span><span class="go">Read the guide →</span></div>
+      </a>
+      <a class="card" data-cat="planning" data-text="home safety checklist parents living alone room by room falls" href="#g9">
+        <img src="assets/home-senior.jpg" alt="Senior living alone at home, in a bright, uncluttered room" />
+        <div class="pad"><span class="tag">Planning &amp; safety</span><h3>Home safety checklist for a parent living alone</h3><p>Room by room, ordered by where falls actually happen — bathroom first, then stairs, then the entry. With a cost tier per fix.</p><span class="costline">Many fixes under $100 · Full list inside</span><span class="go">Read the guide →</span></div>
+      </a>
+      <a class="card" data-cat="planning" data-text="find caps contractor certified aging in place specialist vetting red flags nahb" href="#g10">
+        <img src="assets/hero-bath.jpg" alt="Contractor-finished accessible bathroom with universal design features" />
+        <div class="pad"><span class="tag">Planning · Hiring</span><h3>How to find a CAPS contractor — and vet them</h3><p>What the Certified Aging-in-Place Specialist credential actually means, five vetting questions, and the high-pressure sales red flags.</p><span class="costline">Vetting costs nothing — skipping it can cost thousands</span><span class="go">Read the guide →</span></div>
+      </a>
+      <a class="card" data-cat="bathroom" data-text="comfort height toilet vs raised toilet seat cost install bidet" href="#g11">
+        <img src="assets/grabbars.jpg" alt="Bathroom with a raised toilet and support bars for safer sitting and standing" />
+        <div class="pad"><span class="tag">Bathroom · Compare</span><h3>Comfort-height toilet vs. raised toilet seat</h3><p>The $200 fix that often should come before the $10,000 remodel — install difficulty, fit, and the bidet-seat option.</p><span class="costline">The cheapest high-impact change in this list</span><span class="go">Read the guide →</span></div>
+      </a>
+      <a class="card" data-cat="planning" data-text="fall prevention modifications evidence lighting flooring cdc stead" href="#g12">
+        <img src="assets/ramp.jpg" alt="Well-lit, step-free home entry with a ramp and handrails on both sides" />
+        <div class="pad"><span class="tag">Planning &amp; safety</span><h3>Fall prevention: the modifications that actually work</h3><p>What the evidence supports — lighting, flooring, rails, and the non-obvious items — in plain English, with sources.</p><span class="costline">Start free: declutter, lighting, cord control</span><span class="go">Read the guide →</span></div>
+      </a>
+    </div>
+    <p class="noresults" id="noResults">No guide matches that search. Try “tub”, “Medicare”, “ramp” or “checklist”.</p>
+  </section>
+
+  <!-- ARTICLES 1-4 -->
+  <div class="wrap">
+    <article class="guide" id="g1">
+      <span class="kicker">Guide 1 · Bathroom · Cost by state</span>
+      <h2>How much does a walk-in tub cost, installed — and why your state changes the answer</h2>
+      <p class="sub">National guides quote one wide range because there is no single price: the tub itself is only part of the bill. Permits, plumbing moves, water-heater capacity and local labour decide where you land.</p>
+      <figure class="guide-img" style="margin-left:0;margin-right:0"><img src="assets/walkin-tub.jpg" alt="Walk-in tub with low step-in door, grab handle and built-in seat" /><figcaption>A typical walk-in tub install: low threshold, watertight door, built-in seat, and grab handles.</figcaption></figure>
+      <div class="answer"><b>The short answer:</b> Angi's 2026 data puts walk-in tubs at <b>$1,100 – $17,000</b> across projects — an estimate range, not a quote. Basic tub swaps in lower-cost labour markets sit near the bottom; jetted models with plumbing relocation, a water-heater upgrade and permit/inspection fees sit at the top, in any state.</div>
+      <h3>Check your state</h3>
+      <p>Pick a state to see the same published range with the state-specific factors that push a quote up or down. No honest source publishes a verified per-state average — anyone who gives you an exact “Florida price” without seeing your bathroom is guessing.</p>
+      <div class="statepick">
+        <label for="stateSel"><strong>Your state:</strong></label>
+        <select id="stateSel">
+          <option value="fl">Florida</option>
+          <option value="tx">Texas</option>
+          <option value="ca">California</option>
+          <option value="other">Another state</option>
+        </select>
+      </div>
+      <div class="state-out" id="stateOut" aria-live="polite"></div>
+      <h3>Where the money goes</h3>
+      <table class="cost">
+        <caption>Walk-in tub: cost drivers (estimates)</caption>
+        <thead><tr><th>Line item</th><th>What affects it</th><th>Typical effect</th></tr></thead>
+        <tbody>
+          <tr><td>The tub unit</td><td>Soaker vs. air-jet vs. hydrotherapy; door swing; size</td><td class="num">Largest single item</td></tr>
+          <tr><td>Removal &amp; disposal</td><td>Old tub weight, tile surround, access width</td><td class="num">Low – medium</td></tr>
+          <tr><td>Plumbing</td><td>Moving drains/supply lines costs far more than a like-for-like swap</td><td class="num">Medium – high</td></tr>
+          <tr><td>Water heater</td><td>A deep tub can exceed a small tank's capacity; upsizing adds cost</td><td class="num">Medium when needed</td></tr>
+          <tr><td>Permit &amp; inspection</td><td>Required in many cities for plumbing/electrical changes</td><td class="num">Low, but skipping it risks resale and insurance problems</td></tr>
+          <tr><td>Electrical</td><td>Jetted tubs need a dedicated circuit, often GFCI-protected</td><td class="num">Low – medium</td></tr>
+        </tbody>
+      </table>
+      <h3>Before you sign</h3>
+      <ul>
+        <li>Get three itemised quotes. “Installed price” with no breakdown is how a $5,000 job becomes $11,000.</li>
+        <li>Ask whether the quote includes the water-heater check — running out of hot water mid-fill is the most common owner complaint.</li>
+        <li>Read <a href="#g2">tub vs. shower</a> first: for many households a curbless shower is safer and cheaper.</li>
+        <li>Check <a href="#g3">Medicare coverage</a> and, for veterans, <a href="#g4">VA HISA</a> before paying in full.</li>
+      </ul>
+      <div class="disclaimer"><strong>Estimates, not quotes.</strong> The $1,100–$17,000 range is Angi's national 2026 range. Your final price depends on your bathroom, your city and your contractor — confirm with itemised local quotes. Not medical or legal advice.</div>
+      <p class="srcs">Sources: Angi, <a href="https://www.angi.com/articles/how-much-does-it-cost-make-my-home-handicap-accessible.htm" target="_blank" rel="noopener">accessibility remodel costs (2026)</a>; AARP HomeFit guidance via <a href="#sources">sources list</a>.</p>
+    </article>
+
+    <article class="guide" id="g2">
+      <span class="kicker">Guide 2 · Bathroom · Compare</span>
+      <h2>Walk-in tub vs. walk-in shower: the comparison sellers won't give you</h2>
+      <p class="sub">Tub companies sell tubs and shower companies sell showers. This comparison sells neither — it walks through the daily-use realities that decide which one a household still likes a year later.</p>
+      <figure class="guide-img" style="margin-left:0;margin-right:0"><img src="assets/shower.jpg" alt="Walk-in shower with bench, hand-held shower and low threshold" /><figcaption>A low-threshold walk-in shower: roll or step straight in, sit on the bench, controls within reach.</figcaption></figure>
+      <table class="cost">
+        <caption>Tub vs. shower, side by side</caption>
+        <thead><tr><th>Factor</th><th>Walk-in tub</th><th>Walk-in / curbless shower</th></tr></thead>
+        <tbody>
+          <tr><td>Getting in</td><td>Step over a low threshold, sit, close the door — then wait</td><td>Step or roll straight in; a wheelchair can enter a curbless design</td></tr>
+          <tr><td>Fill &amp; drain wait</td><td>You sit inside while it fills and fully drains before the door opens — often the deal-breaker</td><td>None</td></tr>
+          <tr><td>Hot water</td><td>Deep tubs can drain a small water heater</td><td>Standard use</td></tr>
+          <tr><td>Soaking / hydrotherapy</td><td>Yes — the main reason to choose one</td><td>No soaking; steam and body jets are partial substitutes</td></tr>
+          <tr><td>Cost (estimates)</td><td class="num">$1,100 – $17,000 (Angi)</td><td class="num">See <a href="#g5">conversion guide</a></td></tr>
+          <tr><td>Resale</td><td>Appeals to a narrower set of buyers</td><td>Curbless showers are broadly desirable</td></tr>
+          <tr><td>Caregiver help</td><td>Harder to assist someone in a filled tub</td><td>Easier — open access, bench seating</td></tr>
+        </tbody>
+      </table>
+      <h3>Who should not buy a walk-in tub</h3>
+      <ul>
+        <li>Anyone whose mobility is declining fast — a tub's threshold and transfer get harder; a curbless shower keeps working with a wheelchair.</li>
+        <li>Anyone who dislikes waiting: you cannot open the door until the tub drains.</li>
+        <li>Homes with a small water heater and no budget to upsize it.</li>
+        <li>Households where a caregiver will need to help with bathing.</li>
+      </ul>
+      <h3>Who a tub genuinely suits</h3>
+      <p>Someone who loves soaking, has stable mobility, has the hot-water capacity, and understands the fill/drain wait. If that's your parent, a tub can be the right buy — just price it with the checklist in <a href="#g1">Guide 1</a>.</p>
+      <div class="disclaimer"><strong>Estimates, not quotes.</strong> Costs are published ranges; confirm your project's price with itemised local quotes. This comparison is general information, not medical advice — for bathing-safety decisions, an occupational therapist's home assessment is the gold standard.</div>
+      <p class="srcs">Sources: Angi (2026) cost ranges; CDC fall-prevention guidance, <a href="https://www.cdc.gov/falls/prevention/" target="_blank" rel="noopener">cdc.gov/falls</a>; AARP HomeFit Guide.</p>
+    </article>
+
+    <article class="guide" id="g3">
+      <span class="kicker">Guide 3 · Who pays · Medicare</span>
+      <h2 id="medicare">Does Medicare pay for a walk-in tub, grab bars, or a stair lift?</h2>
+      <p class="sub">The honest headline first: for these three items, Original Medicare's answer is usually no. But “usually” matters — Medicare Advantage plans, Medicaid waivers and VA benefits each have exceptions worth one phone call.</p>
+      <div class="answer"><b>The short answer:</b> Original Medicare generally does <b>not</b> pay for walk-in tubs, grab bars or stair lifts — it treats them as home modifications or convenience items, not durable medical equipment. Some <b>Medicare Advantage</b> plans add home-safety or bathroom-device benefits, some state <b>Medicaid HCBS waivers</b> fund modifications, and the <b>VA</b> covers eligible veterans through HISA and related grants. Check all three before paying out of pocket.</div>
+      <table class="cost">
+        <caption>Coverage by payer (general information — confirm with your plan)</caption>
+        <thead><tr><th>Item</th><th>Original Medicare</th><th>Medicare Advantage</th><th>Medicaid waiver / VA</th></tr></thead>
+        <tbody>
+          <tr><td>Walk-in tub</td><td>Usually no</td><td>Some plans offer home-safety allowances — plan-specific</td><td>Some state HCBS waivers fund bathroom modifications; VA HISA may help eligible veterans</td></tr>
+          <tr><td>Grab bars</td><td>Usually no</td><td>Sometimes included in supplemental home-safety benefits</td><td>Often waiver-eligible as a low-cost safety modification</td></tr>
+          <tr><td>Stair lift</td><td>Usually no</td><td>Rarely; check your plan's supplemental benefits</td><td>Some waivers and VA grants may contribute — eligibility-based</td></tr>
+        </tbody>
+      </table>
+      <h3>The three calls to make before you pay</h3>
+      <ul>
+        <li><strong>Your plan:</strong> If you're on Medicare Advantage, call the number on your card and ask specifically about “supplemental benefits for home safety devices and modifications.” Benefits change yearly.</li>
+        <li><strong>Your state Medicaid office / Area Agency on Aging:</strong> Ask about Home and Community Based Services (HCBS) waivers and any state home-modification programme.</li>
+        <li><strong>The VA (veterans):</strong> Ask about HISA — see <a href="#g4">Guide 4</a> — and SAH/SHA housing grants.</li>
+      </ul>
+      <p>Beware any salesperson who says “Medicare will cover it” as a closing tactic and asks you to sign the same day. Legitimate coverage is confirmed by your plan, in writing — never by a vendor.</p>
+      <div class="disclaimer"><strong>Not medical or legal advice.</strong> Coverage rules change by plan, year and state. Confirm your specific coverage with Medicare (1-800-MEDICARE), your Medicare Advantage plan, your state Medicaid office, or the VA before relying on any statement here.</div>
+      <p class="srcs">Sources: <a href="https://www.medicare.gov/" target="_blank" rel="noopener">Medicare.gov</a> (coverage rules for durable medical equipment and home modifications); <a href="https://www.va.gov/housing-assistance/disability-housing-grants/" target="_blank" rel="noopener">VA disability housing grants</a>; research summary in More Opportunities report §1A.</p>
+    </article>
+
+    <article class="guide" id="g4">
+      <span class="kicker">Guide 4 · Who pays · Veterans</span>
+      <h2>VA HISA grants for home modifications: how to apply, step by step</h2>
+      <p class="sub">The Home Improvements and Structural Alterations (HISA) grant helps eligible veterans pay for medically necessary home changes — bathroom access, ramps, doorways and more. It is separate from the larger SAH/SHA housing grants.</p>
+      <figure class="guide-img" style="margin-left:0;margin-right:0"><img src="assets/home-senior.jpg" alt="Veteran homeowner in a home adapted for independent living" /><figcaption>HISA is designed for exactly this: medically necessary changes that let a veteran live safely at home.</figcaption></figure>
+      <h3>HISA vs. SAH/SHA — which one?</h3>
+      <table class="cost">
+        <caption>VA home-modification help (general information)</caption>
+        <thead><tr><th>Programme</th><th>For</th><th>Scale</th></tr></thead>
+        <tbody>
+          <tr><td>HISA</td><td>Medically necessary improvements — accessible bathroom, ramps, widened doors, counter adjustments</td><td class="num">Smaller, project-level grant; lifetime benefit with different caps for service-connected vs. non-service-connected conditions — check current amounts at VA.gov</td></tr>
+          <tr><td>SAH (Specially Adapted Housing)</td><td>Veterans with certain severe service-connected disabilities, to build or adapt a home</td><td class="num">Large grant, set annually</td></tr>
+          <tr><td>SHA (Special Housing Adaptation)</td><td>Veterans with certain service-connected disabilities, to adapt a home they own or will own</td><td class="num">Mid-size grant, set annually</td></tr>
+        </tbody>
+      </table>
+      <h3>How applying usually works</h3>
+      <ul>
+        <li><strong>1. Confirm eligibility:</strong> You must be a veteran (or service member) with a prescription or medical determination that the modification is necessary. Both service-connected and non-service-connected conditions can qualify for HISA, at different benefit caps.</li>
+        <li><strong>2. Get the medical documentation:</strong> A VA clinician's statement of medical necessity is the core of the application.</li>
+        <li><strong>3. Gather contractor quotes:</strong> The VA will want itemised quotes showing the work the grant is funding. Vague “bathroom remodel — $12,000” quotes slow applications down.</li>
+        <li><strong>4. Apply through VA Prosthetics:</strong> HISA is administered through the VA health system's Prosthetic and Sensory Aids Service at your VA medical centre.</li>
+        <li><strong>5. Wait for approval before starting work:</strong> Starting construction before approval can make the work ineligible — confirm timing with your VA centre first.</li>
+      </ul>
+      <p>Your state veterans' affairs office can also flag state-level programmes that stack with federal ones. Find yours through VA.gov's state directory.</p>
+      <div class="disclaimer"><strong>Not legal or benefits advice.</strong> Grant amounts, caps and eligibility are set by the VA and change over time. Confirm current HISA amounts and your eligibility at <a href="https://www.va.gov/housing-assistance/disability-housing-grants/" target="_blank" rel="noopener">VA.gov</a> or your VA medical centre before planning around them. All project costs remain estimates, not quotes.</div>
+      <p class="srcs">Sources: U.S. Department of Veterans Affairs — <a href="https://www.va.gov/housing-assistance/disability-housing-grants/" target="_blank" rel="noopener">disability housing grants (SAH/SHA)</a> and VA Prosthetics HISA programme pages at va.gov.</p>
+    </article>
+  </div>
+
+  <!-- ARTICLES 5-8 -->
+  <div class="wrap">
+    <article class="guide" id="g5">
+      <span class="kicker">Guide 5 · Bathroom · Cost breakdown</span>
+      <h2>Tub-to-walk-in-shower conversion: where the money actually goes</h2>
+      <p class="sub">This is the most common aging-in-place bathroom job — and the one with the widest quote spread, because “conversion” can mean a one-day panel kit or a full curbless rebuild. Here's how to tell which one you're being quoted.</p>
+      <figure class="guide-img" style="margin-left:0;margin-right:0"><img src="assets/shower.jpg" alt="Converted tub alcove now fitted as a walk-in shower with bench and grab bar" /><figcaption>A converted alcove: the old tub's footprint becomes a low-entry shower with a bench and reachable controls.</figcaption></figure>
+      <div class="answer"><b>Cost anchor:</b> Angi's 2026 data puts most wheelchair-accessible remodels at <b>$701 – $8,041 (average $4,378)</b>. A simple tub-to-shower swap with panel walls can land inside that range; a <b>curbless</b> conversion with tile, drain relocation and floor re-sloping commonly lands above it. All estimates — your quotes decide.</div>
+      <table class="cost">
+        <caption>Conversion cost breakdown (estimates)</caption>
+        <thead><tr><th>Stage</th><th>What's involved</th><th>Cost behaviour</th></tr></thead>
+        <tbody>
+          <tr><td>Demolition &amp; disposal</td><td>Removing the tub (cast iron is heavy), tile and old valves</td><td class="num">Low – medium</td></tr>
+          <tr><td>Plumbing</td><td>New shower valve, drain position; curbless designs often need the drain moved and the floor recessed</td><td class="num">Medium; high if the drain moves</td></tr>
+          <tr><td>Waterproofing</td><td>The membrane/system behind the walls and floor — the step that decides whether the shower leaks in year three</td><td class="num">Medium; never cut this</td></tr>
+          <tr><td>Curb choice</td><td>Standard curb &lt; low-curb &lt; curbless, in both price and accessibility</td><td class="num">Curbless costs most</td></tr>
+          <tr><td>Walls &amp; finish</td><td>Acrylic/fibreglass panels (fast, cheaper) vs. tile (slower, pricier, more grout to maintain)</td><td class="num">Panels low – tile high</td></tr>
+          <tr><td>Safety fittings</td><td>Grab bars, bench, hand-held shower on a slide bar, thermostatic valve</td><td class="num">Low – medium; see <a href="#g6">grab bar guide</a></td></tr>
+        </tbody>
+      </table>
+      <h3>Three questions that expose a padded quote</h3>
+      <ul>
+        <li>“What waterproofing system is included, and is it in writing?”</li>
+        <li>“Does this price assume the drain stays where it is?”</li>
+        <li>“Is this a one-day overlay or a tear-out to the studs?” — both are legitimate; they should not cost the same.</li>
+      </ul>
+      <div class="disclaimer"><strong>Estimates, not quotes.</strong> Ranges above are anchored to Angi's 2026 accessible-remodel data; tile, curbless work and drain relocation push individual projects higher. Confirm with itemised local quotes. Not medical or legal advice.</div>
+      <p class="srcs">Sources: Angi, <a href="https://www.angi.com/articles/how-much-does-it-cost-make-my-home-handicap-accessible.htm" target="_blank" rel="noopener">accessible remodel costs (2026)</a>; AARP HomeFit Guide (shower design).</p>
+    </article>
+
+    <article class="guide" id="g6">
+      <span class="kicker">Guide 6 · Bathroom · How-to</span>
+      <h2>Grab bars: where to place them, at what height — and how to anchor them properly</h2>
+      <p class="sub">Grab bars are the cheapest serious safety upgrade in the home — Angi prices them at $100–$500 each installed — but only when they're placed where a falling person actually reaches, and anchored into structure, not drywall.</p>
+      <figure class="guide-img" style="margin-left:0;margin-right:0"><img src="assets/grabbars.jpg" alt="Stainless grab bars installed beside a tub and toilet" /><figcaption>Properly placed bars: at the tub entry, inside the shower, and beside the toilet.</figcaption></figure>
+      <h3>Placement by location</h3>
+      <table class="cost">
+        <caption>Grab bar placement (general guidance — ADA-style reference points)</caption>
+        <thead><tr><th>Location</th><th>Placement</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Shower entry</td><td>Vertical bar at the entry edge</td><td>Support during the step-in, the highest-risk moment</td></tr>
+          <tr><td>Shower back wall</td><td>Horizontal bar, roughly 33–36 inches above the floor</td><td>Steadying while standing and turning</td></tr>
+          <tr><td>Tub</td><td>Bar at the entry end plus one along the long wall</td><td>Support lowering into and rising from the tub</td></tr>
+          <tr><td>Toilet</td><td>Bar on the side wall beside the toilet, and behind it where the wall allows</td><td>Leverage for sitting and standing</td></tr>
+          <tr><td>Hallways &amp; stairs</td><td>Continuous railings both sides where possible</td><td>Falls aren't only a bathroom problem</td></tr>
+        </tbody>
+      </table>
+      <h3>The three rules that matter more than the bar itself</h3>
+      <ul>
+        <li><strong>Anchor into studs or proper blocking.</strong> A bar screwed into drywall or tile alone will pull out under a falling person's weight. If studs aren't where the bar needs to be, a contractor can add blocking or use rated anchoring systems.</li>
+        <li><strong>Suction-cup bars are not grab bars.</strong> They can release without warning and are suitable, at most, as a light balance touch — never as fall support. If it attaches with a suction cup, don't trust a life to it.</li>
+        <li><strong>Diameter and clearance matter.</strong> Bars about 1¼–1½ inches in diameter, mounted roughly 1½ inches off the wall, are the grip standard hands can actually close around.</li>
+      </ul>
+      <div class="disclaimer"><strong>Estimates, not quotes — and not medical advice.</strong> Placement heights are general reference points; an occupational therapist can tailor placement to the person. Confirm installed cost ($100–$500 per bar, Angi 2026) with a local installer, and never rely on a bar that hasn't been anchor-tested.</div>
+      <p class="srcs">Sources: Angi (2026) grab bar costs; CDC, <a href="https://www.cdc.gov/falls/prevention/" target="_blank" rel="noopener">fall prevention guidance</a>; AARP HomeFit Guide (grab bar placement).</p>
+    </article>
+
+    <article class="guide" id="g7">
+      <span class="kicker">Guide 7 · Mobility · Cost</span>
+      <h2>Stair lift cost: straight vs. curved, new vs. rental</h2>
+      <p class="sub">A straight stair lift is a catalogue product. A curved one is a piece of custom manufacturing. Understanding that difference is the whole pricing story.</p>
+      <div class="answer"><b>The short answer:</b> Angi's 2026 range for stair lifts is <b>$1,500 – $5,000</b> — that describes most <b>straight</b> installs. A <b>curved</b> lift needs a rail bent to your exact staircase, so expect it to cost substantially more than a straight lift; get the rail quoted as its own line item. All estimates, not quotes.</div>
+      <h3>Straight vs. curved</h3>
+      <table class="cost">
+        <caption>Stair lift comparison (estimates)</caption>
+        <thead><tr><th></th><th>Straight</th><th>Curved</th></tr></thead>
+        <tbody>
+          <tr><td>Rail</td><td>Stock rail, cut to length</td><td>Custom-bent to your stairs, measured by survey</td></tr>
+          <tr><td>Typical cost</td><td class="num">$1,500 – $5,000 (Angi range)</td><td class="num">Above the straight range — quote-dependent</td></tr>
+          <tr><td>Lead time</td><td>Days</td><td>Weeks (rail fabrication)</td></tr>
+          <tr><td>Resale / reuse</td><td>Used and refurbished market exists</td><td>Rail fits one staircase only; chair may be reusable</td></tr>
+          <tr><td>Rental</td><td>Commonly available — good for recovery from surgery</td><td>Rare and pricey</td></tr>
+        </tbody>
+      </table>
+      <h3>Rent, buy used, or buy new?</h3>
+      <ul>
+        <li><strong>Rent</strong> when the need is temporary (post-surgery recovery) or you're testing whether the person will use it.</li>
+        <li><strong>Buy used/refurbished</strong> for straight stairs only, and only with installation and a warranty from the seller — a lift's safety depends on its fitting.</li>
+        <li><strong>Buy new</strong> for curved stairs, heavy use, or when warranty and service coverage matter most.</li>
+      </ul>
+      <h3>Measure before anyone quotes</h3>
+      <ul>
+        <li>Stair width and the user's seated width — narrow stairs may need a folding rail or perch seat.</li>
+        <li>Landings: does a door open onto the top or bottom step? Does the rail block a hallway?</li>
+        <li>Power: lifts run on battery with a charger at one end — confirm outlet placement.</li>
+      </ul>
+      <div class="disclaimer"><strong>Estimates, not quotes.</strong> The $1,500–$5,000 range is Angi's 2026 national range, driven by straight lifts. Curved lifts, outdoor lifts and heavy-capacity models cost more — confirm with a measured, itemised quote. Medicare usually does not pay for stair lifts — see <a href="#g3">Guide 3</a>. Not medical or legal advice.</div>
+      <p class="srcs">Sources: Angi, <a href="https://www.angi.com/articles/how-much-does-it-cost-make-my-home-handicap-accessible.htm" target="_blank" rel="noopener">accessibility costs (2026)</a>; Medicare coverage notes in Guide 3.</p>
+    </article>
+
+    <article class="guide" id="g8">
+      <span class="kicker">Guide 8 · Mobility · Cost</span>
+      <h2>Wheelchair ramp cost: wood vs. aluminium vs. modular — and the slope maths that sets the price</h2>
+      <p class="sub">Ramp price is mostly length, and length is mostly maths: the height of your step decides how long the ramp must be. Do the maths first and no quote can surprise you.</p>
+      <figure class="guide-img" style="margin-left:0;margin-right:0"><img src="assets/ramp.jpg" alt="Modular aluminium wheelchair ramp with handrails at a home entrance" /><figcaption>A modular aluminium ramp: rented or bought, it can be removed and resold when no longer needed.</figcaption></figure>
+      <div class="answer"><b>The slope rule:</b> the standard maximum slope is <b>1:12</b> — for every 1 inch of rise, you need 12 inches (1 foot) of ramp. A typical 24-inch-high entry therefore needs about <b>24 feet of ramp</b>, plus level landings. That length — not the material alone — is what you're paying for.</div>
+      <h3>Work out your length</h3>
+      <table class="cost">
+        <caption>Rise → ramp length at 1:12 (before landings)</caption>
+        <thead><tr><th>Entry height (rise)</th><th>Minimum ramp run</th><th>What that means</th></tr></thead>
+        <tbody>
+          <tr><td>6 inches (one step)</td><td class="num">6 feet</td><td>A portable or threshold ramp may suffice</td></tr>
+          <tr><td>12 inches</td><td class="num">12 feet</td><td>Short modular or wood ramp</td></tr>
+          <tr><td>24 inches</td><td class="num">24 feet</td><td>Often needs a switchback or L-shape</td></tr>
+          <tr><td>30 inches</td><td class="num">30 feet</td><td>Switchback with a mid-landing is typical</td></tr>
+        </tbody>
+      </table>
+      <h3>Material choice</h3>
+      <table class="cost">
+        <caption>Ramp materials compared</caption>
+        <thead><tr><th>Material</th><th>Strengths</th><th>Watch out for</th></tr></thead>
+        <tbody>
+          <tr><td>Wood (built on site)</td><td>Lowest build cost; matches the house</td><td>Maintenance, slippery when wet, treated as a permanent structure for permits</td></tr>
+          <tr><td>Modular aluminium</td><td>Fast install, non-slip surface, removable and resalable, often rentable</td><td>Higher upfront cost per foot; industrial look</td></tr>
+          <tr><td>Concrete</td><td>Permanent, low maintenance</td><td>Most expensive to change or remove; permit-heavy</td></tr>
+          <tr><td>Portable / threshold</td><td>Cheapest; no permit; good for one low step</td><td>Only for small rises; check weight rating</td></tr>
+        </tbody>
+      </table>
+      <h3>Permits and HOA rules</h3>
+      <p>Permanent ramps often need a building permit; modular ramps sometimes don't — it varies by city, so ask your building department before building, not after. HOAs may have appearance rules, but accessibility needs carry legal weight in many jurisdictions; if an HOA pushes back, get the rules in writing and consider advice from your Area Agency on Aging or a disability-rights organisation before conceding.</p>
+      <div class="disclaimer"><strong>Estimates, not quotes.</strong> Ramp totals scale with length, landings and material; anchor your expectations with the accessible-remodel range ($701–$8,041 for most, Angi 2026) and confirm with itemised quotes. Slope figures follow the standard 1:12 accessibility guideline — confirm local code with your building department. Not legal advice.</div>
+      <p class="srcs">Sources: Angi (2026) accessibility costs; ADA-style slope guidance (1:12) as referenced in AARP HomeFit and CDC home-safety materials.</p>
+    </article>
+  </div>
+
+  <!-- CHECKLIST + ARTICLES 9-12 -->
+  <section class="block wrap" id="checklist">
+    <div class="sec-head">
+      <h2>The weekend safety walk-through</h2>
+      <p>Guide 9 in working form: walk a parent's home in this order — bathroom first, because that's where the dangerous falls cluster — and note anything missing. Cost tiers are estimates per item: <strong>$</strong> under $25, <strong>$$</strong> $25–$150, <strong>$$$</strong> $150+. Nothing here replaces an occupational therapist's assessment.</p>
+    </div>
+    <div class="check-grid">
+      <div class="check-col">
+        <h3>Bathroom — do this first</h3>
+        <ul class="tick">
+          <li>Grab bars at tub/shower entry and beside the toilet, anchored into studs <span class="c">$$–$$$</span> — <a href="#g6">Guide 6</a></li>
+          <li>Non-slip strips or mat inside the tub/shower <span class="c">$</span></li>
+          <li>Hand-held shower on a slide bar <span class="c">$$</span></li>
+          <li>Shower bench or seat <span class="c">$$</span></li>
+          <li>Raised toilet seat or comfort-height toilet <span class="c">$$</span> — <a href="#g11">Guide 11</a></li>
+          <li>Water temperature limited to a scald-safe setting <span class="c">$</span></li>
+          <li>Night light on the bedroom-to-bathroom path <span class="c">$</span></li>
+        </ul>
+      </div>
+      <div class="check-col">
+        <h3>Stairs &amp; entry</h3>
+        <ul class="tick">
+          <li>Handrails on both sides of every stair run <span class="c">$$–$$$</span></li>
+          <li>Step edges marked with contrast tape <span class="c">$</span></li>
+          <li>Bright lighting at top and bottom, switches at both ends <span class="c">$$</span></li>
+          <li>Step-free or ramped main entry, or a plan for one <span class="c">$$$</span> — <a href="#g8">Guide 8</a></li>
+          <li>Lever door handles instead of knobs <span class="c">$$</span></li>
+          <li>House numbers visible from the street for emergency services <span class="c">$</span></li>
+        </ul>
+      </div>
+      <div class="check-col">
+        <h3>Kitchen &amp; living areas</h3>
+        <ul class="tick">
+          <li>Everyday items moved to waist-height shelves — no step stools <span class="c">Free</span></li>
+          <li>Throw rugs removed or taped down flat <span class="c">Free–$</span></li>
+          <li>Cords run along walls, never across walkways <span class="c">$</span></li>
+          <li>Stove with auto shut-off, or shut-off reminders <span class="c">$$</span></li>
+          <li>Clear, wide paths between furniture <span class="c">Free</span></li>
+          <li>Smoke and carbon-monoxide detectors tested <span class="c">$</span></li>
+        </ul>
+      </div>
+      <div class="check-col">
+        <h3>Daily-life safety</h3>
+        <ul class="tick">
+          <li>Phone or alert device reachable from the floor (falls happen away from tables) <span class="c">$$</span></li>
+          <li>Medication list on the fridge, current and legible <span class="c">Free</span></li>
+          <li>Annual medication review — some medicines raise fall risk <span class="c">Ask the pharmacist</span></li>
+          <li>Vision and hearing checked — both feed balance <span class="c">Check-up</span></li>
+          <li>Sturdy, low-heeled shoes with closed backs indoors <span class="c">$$</span></li>
+          <li>A neighbour or family member with a spare key and a check-in routine <span class="c">Free</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="btnrow">
+      <button class="btn" id="copyChecklist" type="button">Copy this checklist</button>
+      <span class="copied" id="copiedMsg" aria-live="polite"></span>
+    </div>
+    <div class="disclaimer" style="max-width:none"><strong>Not medical advice.</strong> This checklist is general information drawn from CDC and AARP home-safety guidance. For a parent who has already fallen, ask their clinician about a falls-risk assessment and an occupational-therapy home visit. Costs are estimates, not quotes.</div>
+  </section>
+
+  <div class="wrap">
+    <article class="guide" id="g9">
+      <span class="kicker">Guide 9 · Planning &amp; safety</span>
+      <h2>Home safety checklist for parents living alone</h2>
+      <p class="sub">The full reasoning behind the walk-through above: why the order matters, and how to have the conversation without it sounding like a takeover.</p>
+      <figure class="guide-img" style="margin-left:0;margin-right:0"><img src="assets/home-senior.jpg" alt="Parent living alone comfortably in a safe, well-lit home" /><figcaption>The goal is not a clinical home — it's the same home, with the traps removed.</figcaption></figure>
+      <h3>Why bathroom → stairs → entry</h3>
+      <p>CDC fall-prevention guidance and AARP's HomeFit work point to the same pattern: the bathroom combines water, hard surfaces and transfers (standing from low seats, stepping over tub walls); stairs add height; the entry adds weather, steps and packages in arms. Fixing in that order removes the most risk per dollar first — and the <a href="#checklist">walk-through above</a> is ordered exactly that way, with the cheap fixes ($ tier) deliberately ahead of the remodels.</p>
+      <h3>How to raise it with a parent</h3>
+      <ul>
+        <li>Lead with a specific, small fix (“let's put a bar by the tub”) not a verdict (“this house isn't safe”).</li>
+        <li>Frame it as staying home longer, not as decline: every item on the list is independence equipment.</li>
+        <li>Do the free fixes together on the first visit — momentum beats a master plan.</li>
+        <li>Agree the check-in routine (call days, spare key, alert device) as a two-way arrangement.</li>
+      </ul>
+      <div class="disclaimer"><strong>Not medical advice.</strong> General information from CDC/AARP guidance; a parent who has fallen, feels dizzy, or takes multiple medications needs a clinician's falls-risk review. Costs shown are estimates, not quotes.</div>
+      <p class="srcs">Sources: CDC, <a href="https://www.cdc.gov/falls/prevention/" target="_blank" rel="noopener">Preventing Falls</a> and STEADI materials; AARP HomeFit Guide.</p>
+    </article>
+
+    <article class="guide" id="g10">
+      <span class="kicker">Guide 10 · Planning · Hiring</span>
+      <h2>How to find a CAPS contractor — and the five questions that vet one</h2>
+      <p class="sub">CAPS — Certified Aging-in-Place Specialist — is a credential run through the National Association of Home Builders (NAHB). It signals training in designing and building for older adults. It does not, by itself, guarantee a good contractor — so you still vet.</p>
+      <figure class="guide-img" style="margin-left:0;margin-right:0"><img src="assets/hero-bath.jpg" alt="Finished universal-design bathroom built by a specialist contractor" /><figcaption>Specialist work to look for: curbless entry, blocking behind walls for future bars, reachable controls.</figcaption></figure>
+      <h3>Finding one</h3>
+      <ul>
+        <li>Start with the NAHB's CAPS directory, then cross-check: state licence, insurance, and recent local references.</li>
+        <li>Your local Area Agency on Aging and independent-living centre often keep informal lists of contractors who do this work well.</li>
+        <li>Occupational therapists who do home assessments are an underused source of contractor referrals — they see whose work actually functions.</li>
+      </ul>
+      <h3>Five vetting questions</h3>
+      <ul>
+        <li>“Show me photos of two aging-in-place jobs like mine, and let me call those clients.”</li>
+        <li>“Where will you put blocking for grab bars we might add later?” — specialists plan for it; generalists look puzzled.</li>
+        <li>“Is your quote itemised — unit, plumbing, electrical, permit, disposal — line by line?”</li>
+        <li>“Who pulls the permit, and will I see the inspection sign-off?”</li>
+        <li>“What would you do differently if this were for your own parent?” — listen for specifics, not slogans.</li>
+      </ul>
+      <h3>Red flags</h3>
+      <ul>
+        <li>High-pressure in-home sales, especially for walk-in tubs and stair lifts: “today-only” pricing, refusal to leave a written quote.</li>
+        <li>Claims that “Medicare will pay for it” — see <a href="#g3">Guide 3</a>.</li>
+        <li>Large cash deposits before permits, materials or a start date exist.</li>
+        <li>No licence number on the quote, or a licence that doesn't check out with the state.</li>
+      </ul>
+      <div class="disclaimer"><strong>Estimates, not quotes — and not legal advice.</strong> Verify licences and insurance with your state board, get contracts in writing, and confirm any coverage claims with your plan. Credential details are NAHB's; confirm a contractor's current certification in the NAHB directory.</div>
+      <p class="srcs">Sources: NAHB, CAPS programme and directory (<a href="https://www.nahb.org/education-and-events/education/designations/certified-aging-in-place-specialist-caps" target="_blank" rel="noopener">nahb.org</a>); AARP HomeFit Guide (working with contractors).</p>
+    </article>
+
+    <article class="guide" id="g11">
+      <span class="kicker">Guide 11 · Bathroom · Compare</span>
+      <h2>Comfort-height toilet vs. raised toilet seat: the $200 fix before the $10,000 remodel</h2>
+      <p class="sub">Standing up from a low toilet is one of the hardest daily movements for ageing knees and hips. Two fixes exist at very different prices — and the cheaper one is often the right first step.</p>
+      <figure class="guide-img" style="margin-left:0;margin-right:0"><img src="assets/grabbars.jpg" alt="Toilet area fitted with grab bars and a raised seat for easier standing" /><figcaption>Either fix works better with a properly anchored grab bar beside the toilet — see Guide 6.</figcaption></figure>
+      <table class="cost">
+        <caption>Toilet options compared</caption>
+        <thead><tr><th></th><th>Raised toilet seat</th><th>Comfort-height toilet</th></tr></thead>
+        <tbody>
+          <tr><td>What it is</td><td>A seat that clamps or bolts onto the existing toilet, adding height</td><td>A replacement toilet with a taller bowl (about 17–19 inches to the seat, chair height)</td></tr>
+          <tr><td>Install</td><td>Minutes, no plumber, reversible — ideal for recovery from surgery</td><td>Plumber or confident DIY; check your rough-in measurement and bowl shape (round vs. elongated) first</td></tr>
+          <tr><td>Stability</td><td>Depends on the fixing — cheap clamp-only models can shift; bolted models with arms are far better</td><td>Permanent and rock-solid</td></tr>
+          <tr><td>Cleaning</td><td>Extra seams to clean around</td><td>Normal</td></tr>
+          <tr><td>Best for</td><td>Trial periods, temporary need, rented homes, tight budgets</td><td>The long-term main bathroom</td></tr>
+          <tr><td>Add-on</td><td colspan="2">Either pairs well with a bidet seat, which many older adults find restores independent toileting hygiene — worth asking an occupational therapist about</td></tr>
+        </tbody>
+      </table>
+      <h3>The order to do it in</h3>
+      <ul>
+        <li>Start with a quality bolted raised seat with arms. If it solves the problem, you've spent the least possible.</li>
+        <li>If the need is permanent and the bathroom is due other work, fold a comfort-height toilet into that project — the marginal cost inside a remodel is small.</li>
+        <li>Whichever you choose, add the beside-toilet grab bar (<a href="#g6">Guide 6</a>) — height plus something to pull on is the real combination.</li>
+      </ul>
+      <div class="disclaimer"><strong>Estimates, not quotes.</strong> Product and installation costs vary by model and market; the point of this guide is sequencing — cheapest effective fix first — not a price promise. Not medical advice; ask an occupational therapist about the right seat height for the individual.</div>
+      <p class="srcs">Sources: AARP HomeFit Guide (toilet height and bathroom safety); Angi (2026) for related bathroom-modification costs.</p>
+    </article>
+
+    <article class="guide" id="g12">
+      <span class="kicker">Guide 12 · Planning &amp; safety</span>
+      <h2>Fall prevention: the home modifications that actually work</h2>
+      <p class="sub">One in four adults 65+ falls each year (CDC). Not every product sold as “fall prevention” changes that. These are the changes with real evidence and official guidance behind them, in plain English.</p>
+      <figure class="guide-img" style="margin-left:0;margin-right:0"><img src="assets/ramp.jpg" alt="Step-free, well-lit home entry with ramp and handrails" /><figcaption>Removing the step, adding rails and lighting: three evidence-backed changes in one entry.</figcaption></figure>
+      <h3>What the evidence supports</h3>
+      <table class="cost">
+        <caption>Fall-prevention changes, by evidence and effort</caption>
+        <thead><tr><th>Change</th><th>Why it works</th><th>Start here</th></tr></thead>
+        <tbody>
+          <tr><td>Grab bars &amp; rails in the right places</td><td>Bathroom transfers are a top fall site; bars give a fixed point of support</td><td class="num"><a href="#g6">Guide 6</a></td></tr>
+          <tr><td>Better lighting, everywhere</td><td>Ageing eyes need more light to judge edges and steps; night paths matter most</td><td class="num">Bulbs + night lights, $ tier</td></tr>
+          <tr><td>Remove trip hazards</td><td>Throw rugs, cords and clutter are cheap to fix and commonly implicated</td><td class="num">Free — <a href="#checklist">checklist</a></td></tr>
+          <tr><td>Non-slip flooring &amp; footwear</td><td>Socks on hard floors and loose slippers are a recurring factor; firm, low-heeled shoes grip better</td><td class="num">$–$$ tier</td></tr>
+          <tr><td>Exercise for strength &amp; balance</td><td>CDC's STEADI work highlights exercise as one of the strongest non-home interventions</td><td class="num">Clinician-guided</td></tr>
+          <tr><td>Medication &amp; vision review</td><td>Some medicines and uncorrected vision raise fall risk — a review catches what a remodel can't</td><td class="num">Ask clinician / pharmacist</td></tr>
+        </tbody>
+      </table>
+      <h3>What to be sceptical of</h3>
+      <ul>
+        <li>Any single gadget marketed as preventing falls on its own. Falls are multi-factor; the fix is a system, not a product.</li>
+        <li>Suction-cup “grab bars” sold as safety equipment — see <a href="#g6">Guide 6</a>.</li>
+        <li>Expensive remodels done before the free fixes: decluttering and lighting come first, always.</li>
+      </ul>
+      <div class="disclaimer"><strong>Not medical advice.</strong> This guide summarises public CDC and AARP guidance in plain English. Anyone who has fallen, or who feels unsteady, should get a clinician's falls-risk assessment (CDC STEADI) — home changes complement, never replace, that review. Costs mentioned are estimates, not quotes.</div>
+      <p class="srcs">Sources: CDC, <a href="https://www.cdc.gov/falls/prevention/" target="_blank" rel="noopener">Preventing Falls</a>, CDC STEADI, and CDC fall data (1 in 4 adults 65+ falls each year); AARP HomeFit Guide.</p>
+    </article>
+  </div>
+
+  <!-- SOURCES -->
+  <section class="block wrap" id="sources">
+    <div class="sec-head">
+      <h2>Sources &amp; how this site was researched</h2>
+      <p>Cost and demand figures come from the November 2026 “More Opportunities” research and the public sources below. Figures are tiers, ranges and estimates from those sources — never exact quotes — and coverage rules change, so confirm before you act.</p>
+    </div>
+    <ul class="sources-list" style="list-style:none;padding-left:0">
+      <li><strong>CDC — Preventing Falls.</strong> Fall-prevention guidance and older-adult fall data. <a href="https://www.cdc.gov/falls/prevention/" target="_blank" rel="noopener">cdc.gov/falls/prevention</a></li>
+      <li><strong>AARP — HomeFit Guide.</strong> Room-by-room aging-in-place modifications, grab-bar and toilet guidance. <a href="https://www.aarp.org/home-family/your-home/info-2021/homefit-guide.html" target="_blank" rel="noopener">aarp.org HomeFit</a></li>
+      <li><strong>Medicare.gov.</strong> Original Medicare coverage rules for home modifications and durable medical equipment. <a href="https://www.medicare.gov/" target="_blank" rel="noopener">medicare.gov</a></li>
+      <li><strong>U.S. Department of Veterans Affairs.</strong> Disability housing grants (SAH/SHA) and HISA via VA Prosthetics. <a href="https://www.va.gov/housing-assistance/disability-housing-grants/" target="_blank" rel="noopener">va.gov housing grants</a></li>
+      <li><strong>Angi (2026).</strong> Accessibility remodel costs from 403 projects: remodel average $4,378 (most $701–$8,041), grab bars $100–$500 each, stair lift $1,500–$5,000, walk-in tub $1,100–$17,000. <a href="https://www.angi.com/articles/how-much-does-it-cost-make-my-home-handicap-accessible.htm" target="_blank" rel="noopener">angi.com</a></li>
+      <li><strong>NAHB.</strong> Certified Aging-in-Place Specialist (CAPS) programme and directory. <a href="https://www.nahb.org/education-and-events/education/designations/certified-aging-in-place-specialist-caps" target="_blank" rel="noopener">nahb.org</a></li>
+      <li><strong>Household Guardians summary</strong> of AARP / Harvard JCHS / NAHB figures: 80–90% of adults 65+ prefer to age in place; ~28% of homes aging-ready. <a href="https://www.householdguardians.com/post/what-percentage-of-people-prefer-to-age-in-place" target="_blank" rel="noopener">householdguardians.com</a></li>
+      <li><strong>Market context (vendor estimates):</strong> aging-in-place modification market $38.6B (2025) → $86.4B (2034), MarketIntelo; US aging-in-bathroom products $3.12B (2025), Emergen Research. Treat as directional estimates, not audited figures.</li>
+    </ul>
+    <div class="notice" role="note"><strong>Open questions, stated plainly:</strong> no source we could check publishes verified per-state average prices for walk-in tubs, conversions or ramps — that's why Guide 1 gives the national range plus state cost drivers instead of invented state prices. Exact search volumes and contractor lead prices would need paid-tool and local verification.</div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap cols">
+    <div>
+      <h3>StayingHome — aging-in-place guides</h3>
+      <p>Cost-first, state-aware guides for adult children and homeowners 65+. Every price on this site is an estimate or range drawn from the cited sources — never a quote, a guarantee, or a substitute for an itemised local bid.</p>
+      <p>This site provides general information only and is <strong>not medical, legal, or benefits advice</strong>. Confirm coverage with your health plan, Medicare, Medicaid office or the VA, and confirm costs and code requirements with a licensed local contractor and your building department.</p>
+    </div>
+    <div>
+      <h3>The 12 guides</h3>
+      <ul>
+        <li><a href="#g1">1 · Walk-in tub cost by state</a></li>
+        <li><a href="#g2">2 · Tub vs. walk-in shower</a></li>
+        <li><a href="#g3">3 · Does Medicare pay?</a></li>
+        <li><a href="#g4">4 · VA HISA grants</a></li>
+        <li><a href="#g5">5 · Tub-to-shower conversion cost</a></li>
+        <li><a href="#g6">6 · Grab bar placement</a></li>
+        <li><a href="#g7">7 · Stair lift: straight vs. curved</a></li>
+        <li><a href="#g8">8 · Wheelchair ramp cost</a></li>
+        <li><a href="#g9">9 · Safety checklist for parents</a></li>
+        <li><a href="#g10">10 · Finding a CAPS contractor</a></li>
+        <li><a href="#g11">11 · Comfort-height toilet vs. raised seat</a></li>
+        <li><a href="#g12">12 · Fall prevention that works</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // ---- State picker (Guide 1) ----
+  var stateData = {
+    fl: { name: "Florida", note: "Florida quotes are driven by a high share of retiree remodels and strong contractor competition in metro areas, but permitting for plumbing and electrical changes is enforced in most counties, and hurricane-code requirements can add items coastal homes elsewhere don't need. Expect your position in the range to be set mainly by whether plumbing moves and whether the water heater needs upsizing." },
+    tx: { name: "Texas", note: "Texas labour rates in major metros often sit below coastal-state levels, which pulls straightforward tub swaps toward the lower half of the range — but permit rules vary sharply by city (some suburbs require them for this work, some don't), and slab foundations make drain relocation expensive when it's needed. Ask every bidder whether the drain moves; that's the Texas price swing." },
+    ca: { name: "California", note: "California sits at the top of the labour-cost range nationally, and Title 24 / local permit and inspection requirements add line items other states skip. The same tub that quotes mid-range elsewhere commonly quotes high-range in coastal California metros. Get the permit and inspection fees itemised — they should be visible, not buried." },
+    other: { name: "your state", note: "No verified per-state average exists in the sources we could check — which is itself useful to know when a salesperson quotes you one. Your position in the national range is set by local labour rates, whether your city requires a permit for plumbing/electrical changes, and whether the water heater and drain need work. Three itemised quotes will tell you more than any national table." }
+  };
+  var sel = document.getElementById('stateSel');
+  var out = document.getElementById('stateOut');
+  function renderState(){
+    var d = stateData[sel.value];
+    out.innerHTML = '<div class="big">$1,100 – $17,000 installed (estimate range)</div>' +
+      '<p style="margin:8px 0 0">In <strong>' + d.name + '</strong>: ' + d.note + '</p>' +
+      '<p style="margin:8px 0 0;font-size:.88rem;color:var(--muted)">Range: Angi 2026 national data. Estimate, not a quote — confirm with itemised local bids.</p>';
+  }
+  sel.addEventListener('change', renderState);
+  renderState();
+
+  // ---- Card filter + search ----
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chipbtn'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#cardGrid .card'));
+  var search = document.getElementById('guideSearch');
+  var noRes = document.getElementById('noResults');
+  var activeFilter = 'all';
+  function applyFilter(){
+    var q = (search.value || '').toLowerCase().trim();
+    var visible = 0;
+    cards.forEach(function(c){
+      var catOk = activeFilter === 'all' || c.getAttribute('data-cat') === activeFilter;
+      var text = (c.textContent + ' ' + (c.getAttribute('data-text') || '')).toLowerCase();
+      var qOk = !q || text.indexOf(q) !== -1;
+      var show = catOk && qOk;
+      c.classList.toggle('hidden-card', !show);
+      if (show) visible++;
+    });
+    noRes.style.display = visible ? 'none' : 'block';
+  }
+  chips.forEach(function(ch){
+    ch.addEventListener('click', function(){
+      chips.forEach(function(x){ x.setAttribute('aria-pressed','false'); });
+      ch.setAttribute('aria-pressed','true');
+      activeFilter = ch.getAttribute('data-filter');
+      applyFilter();
+    });
+  });
+  search.addEventListener('input', applyFilter);
+
+  // ---- Copy checklist ----
+  var btn = document.getElementById('copyChecklist');
+  var msg = document.getElementById('copiedMsg');
+  btn.addEventListener('click', function(){
+    var cols = document.querySelectorAll('.check-col');
+    var lines = ['HOME SAFETY WALK-THROUGH — StayingHome guides', 'Estimates only; not medical advice.', ''];
+    cols.forEach(function(col){
+      var h = col.querySelector('h3');
+      lines.push(h.textContent.toUpperCase());
+      col.querySelectorAll('li').forEach(function(li){
+        lines.push('[ ] ' + li.textContent.replace(/\s+/g,' ').trim());
+      });
+      lines.push('');
+    });
+    var text = lines.join('\n');
+    function done(){ msg.textContent = 'Copied — paste it into Notes, Docs or an email.'; }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, function(){ fallback(); });
+    } else { fallback(); }
+    function fallback(){
+      var ta = document.createElement('textarea');
+      ta.value = text; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); done(); } catch(e){ msg.textContent = 'Copy failed in this browser — you can still read the full list above.'; }
+      document.body.removeChild(ta);
+    }
+  });
+})();
+</script>
+</body>
+</html>
